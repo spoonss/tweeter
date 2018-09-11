@@ -1,8 +1,9 @@
 #nav-bar {
-    margin: 0;
-    position: static;
+    top: 0;
+    position: fixed;
     background-color: #00a087;
     height: 80px;
+    width: 100vw;
     color: #e8fdff;
     padding-left: 2em;
     padding-right: 2em;
@@ -16,7 +17,7 @@
 }
 
 #nav-bar .header {
-    line-height: 80px;
+    line-height: 80px; 
     font-size: 200%;
     margin-left: 10px;
 }
