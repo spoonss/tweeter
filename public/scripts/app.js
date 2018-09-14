@@ -65,7 +65,10 @@
 //  to add it to the page so we can make sure it's got all the right elements, classes, etc.
 
 
+
+
   function createTweetElement(tweet) {
+
     let $tweet = $('<article>').addClass('tweeted');
     let $header = $('<header>');
     let $avatarSmall = $('<img>').addClass('logo').attr("src", tweet.user.avatars.small);
@@ -73,7 +76,7 @@
     let $handle = $('<span>').addClass('handle').text(tweet.user.handle);
     let $content = $('<p>').addClass('text').text(tweet.content.text);
     let $footer = $('<footer>').addClass('tweet-footer');
-    let $createdAt = $('<span>').addClass('createdAt').text(tweet.created_at);
+    let $createdAt = $('<span>').addClass('createdAt').text(moment(tweet.created_at).fromNow());
     let $flagicon = $('<img>').addClass('tweet-footer-icon').attr("src", "/images/flag-icon.png");
     let $hearticon = $('<img>').addClass('tweet-footer-icon').attr("src", "/images/heart.png");
     let $retweeticon = $('<img>').addClass('tweet-footer-icon').attr("src", "/images/retweet-icon.png");

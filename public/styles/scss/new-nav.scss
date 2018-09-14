@@ -1,0 +1,32 @@
+#nav-bar {
+    top: 0;
+    position: fixed;
+    background-color:#ff7f50	;
+    height: 80px;
+    width: 100vw;
+    color: #e8fdff;
+    padding-left: 2em;
+    padding-right: 2em;
+    z-index: 1;
+
+}   
+
+#tweeter-logo {
+    float: left;
+    width: 80px;
+    height: 80px;
+}
+
+#compose {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    float: right;
+    width: 95px;
+    height: 80px;
+}
+
+#nav-bar .header {
+    line-height: 80px; 
+    font-size: 2em;
+    margin-left: 10px;
+}
