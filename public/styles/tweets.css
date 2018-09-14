@@ -29,12 +29,15 @@ article .logo {
     border-bottom-right-radius: 10px;
     border-top: 1px solid black;
     padding-bottom: 14px;
+    padding-left: 10px;
 }
 
-p.text {
+.text {
     margin: 0px;
     min-height: 130px;
     background-color: white;
+    padding: 10px;
+    word-wrap: break-word;
 }
 
 span.name {
@@ -72,7 +75,7 @@ article header {
     opacity: 1;
 }
 
-.heart {
+.tweet-footer-icon {
     margin-right: 10px;
     float: right;
     width: 25px;
@@ -81,6 +84,6 @@ article header {
 }
 
 
-.tweeted:hover .heart {
+.tweeted:hover .tweet-footer-icon {
     display: inline;
 }

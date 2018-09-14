@@ -45,8 +45,12 @@
             <h2>Compose Tweet</h2>
             <form action="/tweets/" method="post" id='tweets-form'>
               <textarea name="text" placeholder="What are you humming about?"></textarea>
-              <input type="submit" value="Tweet">
-              <span class="counter">140</span>
+              <div>
+                <input type="submit" value="Tweet">
+                <span id="error-message"></span>
+                <span id="textMsg"></span>
+                <span class="counter">140</span>
+              </div>
             </form>
         </section>
 
@@ -60,9 +64,9 @@
               <p class="text">asdfsdafdasfsadfsdaf</p>
               <footer class="tweet-footer">
                 <span class="createdAt">10 days ago</span>
-                <img class="heart" src="/images/heart.png">
-                <img class="heart" src="/images/heart.png">
-                <img class="heart" src="/images/heart.png">
+                <img class="tweet-footer-icon" src="/images/heart.png">
+                <img class="tweet-footer-icon" src="/images/retweet-icon.png">
+                <img class="tweet-footer-icon" src="/images/flag-icon.png">
               </footer>
             </article>
           </section>

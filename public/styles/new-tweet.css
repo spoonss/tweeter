@@ -13,20 +13,19 @@
 }
 
 #new-tweet-container textarea {
-    width: 365px;   
-    margin-top: 10px;
-    margin-left: 10px;
+    width: 620px;   
     height: 55px;
+    resize: none;
+    margin: 8px;
 } 
 
-
-section form input {
-    margin-left: 10px;
+#new-tweet-container input {
+    margin-left: 8px;
 } 
 
 
 span.counter{
     float: right;
-    margin-right: 20px
+    margin-right: 8px
 }
 

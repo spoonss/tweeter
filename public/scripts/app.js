@@ -53,18 +53,11 @@
     $('textarea').focus();
         });
 
-
-  function loadTweets(){
-    $.ajax('/tweets/', { method: 'GET' })
-    .then(function (tweets) {
-      renderTweets(tweets);
-     })
-  }
+ 
 
   function renderTweets(tweets) {
-        for(let tweet of tweets){
-            var $tweet = createTweetElement(tweet);
-            $('#tweets-container').prepend($tweet);
+        for(let object of tweets){
+            $('#tweets-container').prepend(createTweetElement(object));
         }
   }
 //   Test / driver code (temporary)
@@ -81,14 +74,19 @@
     let $content = $('<p>').addClass('text').text(tweet.content.text);
     let $footer = $('<footer>').addClass('tweet-footer');
     let $createdAt = $('<span>').addClass('createdAt').text(tweet.created_at);
-    let $imgHeart =
-    
+    let $flagicon = $('<img>').addClass('tweet-footer-icon').attr("src", "/images/flag-icon.png");
+    let $hearticon = $('<img>').addClass('tweet-footer-icon').attr("src", "/images/heart.png");
+    let $retweeticon = $('<img>').addClass('tweet-footer-icon').attr("src", "/images/retweet-icon.png");
+
     $header.append($avatarSmall);
     $header.append($name);
     $header.append($handle);
     $tweet.append($header);
     $tweet.append($content);
     $footer.append($createdAt);
+    $footer.append($hearticon);
+    $footer.append($retweeticon);
+    $footer.append($flagicon);
     $tweet.append($footer);
     
     return $tweet;
@@ -98,22 +96,43 @@
 
   $('#tweets-form').on('submit', function(e) {
     e.preventDefault();
-    
+    // $("#error-message").val()
+    // $("#error-message").slideUp("slow", function ()
+    // {
+    //     $("#textMsg").text("blah.");
+    // });
         if($("#tweets-form textarea").val() === ""){
-            alert("Tweet cannot be emptied!");
-        } else if ($("#tweets-form textarea").val().length > 140){
-            alert("Tweet cannot be more than 140 characters");}
+            // alert("Tweet cannot be emptied!");
+            $("#error-message").slideToggle("slow");
+            $("#error-message").text("Tweet cannot be emptied!").css("color", "red").slideDown("slow");
+             } else if ($("#tweets-form textarea").val().length > 140){
+            // alert("Tweet cannot be more than 140 characters");
+            $("#error-message").slideToggle("slow");
+            $("#error-message").text("Tweet OVER 140 characters!").css("color", "red").slideDown("slow");  
+        }
             else {
-                let formData = $('form textarea').serialize();
+                let formData = $('textarea').serialize();
                 $.ajax('/tweets/', {
                  method: 'POST',
                 data: formData
                 }).then(function(tweet) {
-                    $('textarea').val('');
+                    $('#error-message').empty();
+                    $('textarea').val('');  
                 return $.ajax('/tweets/');
                 }).then(loadTweets());
-            }   
+            }       
   })
+
+
+  function loadTweets(){
+    $.ajax('/tweets/', { method: 'GET' })
+    .then(function (tweets) {
+      renderTweets(tweets);
+     })
+  } 
+loadTweets();
+
+  
 });
 
 
