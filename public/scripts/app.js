@@ -106,12 +106,12 @@
     // });
         if($("#tweets-form textarea").val() === ""){
             // alert("Tweet cannot be emptied!");
-            $("#error-message").slideToggle("slow");
-            $("#error-message").text("Tweet cannot be emptied!").css("color", "red").slideDown("slow");
+            $("#error-message").slideToggle("fast");
+            $("#error-message").text("Tweet cannot be emptied!").css("color", "red").slideDown("fast");
              } else if ($("#tweets-form textarea").val().length > 140){
             // alert("Tweet cannot be more than 140 characters");
-            $("#error-message").slideToggle("slow");
-            $("#error-message").text("Tweet OVER 140 characters!").css("color", "red").slideDown("slow");  
+            $("#error-message").slideToggle("fast");
+            $("#error-message").text("Tweet OVER 140 characters!").css("color", "red").slideDown("fast");  
         }
             else {
                 let formData = $('textarea').serialize();

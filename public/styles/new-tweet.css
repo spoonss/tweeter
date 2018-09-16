@@ -4,6 +4,7 @@
     border-radius: 10px;
     margin: 5px 2em 30px 2em;
     height: 190px;
+    border: 1px solid black;
 }
 
 #new-tweet-container h2 {
@@ -28,4 +29,3 @@ span.counter{
     float: right;
     margin-right: 8px
 }
-
