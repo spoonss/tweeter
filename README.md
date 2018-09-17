@@ -26,4 +26,4 @@ User has the ability to compose tweets and share with the world. The tweets will
 ## Getting Started
 
 - Install all dependencies (using the `npm install` command).
-- Run the development web server using the `node express_server.js` command.
+- Run the development web server using the `npm run local` command.
