@@ -7,10 +7,10 @@ User has the ability to compose tweets and share with the world. The tweets will
 ## Final Product
 
 ### New Tweet box
-!["Screenshot of New Tweet box"]()
+!["Screenshot of New Tweet box"](https://github.com/spoonss/tweeter/blob/master/doc/tweet-box.png)
 
 ### Compoosed Tweets
-!["Screenshot of composed Tweets"]()
+!["Screenshot of composed Tweets"](https://github.com/spoonss/tweeter/blob/master/doc/tweets-history.png)
 
 
 ## Dependencies
