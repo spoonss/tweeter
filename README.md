@@ -9,7 +9,7 @@ User has the ability to compose tweets and share with the world. The tweets will
 ### New Tweet box
 !["Screenshot of New Tweet box"](https://github.com/spoonss/tweeter/blob/master/doc/tweet-box.png)
 
-### Compoosed Tweets
+### Composed Tweets
 !["Screenshot of composed Tweets"](https://github.com/spoonss/tweeter/blob/master/doc/tweets-history.png)
 
 
